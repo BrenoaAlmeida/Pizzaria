@@ -12,7 +12,7 @@ class CreateUserController {
              password
         });
 
-        return res.json({result});
+        return res.json(result);
     }   
 
 }
