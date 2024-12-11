@@ -10,4 +10,4 @@ class ListByCategoryController {
     }
 }
 
-export {ListByCategoryController}
+export { ListByCategoryController }
