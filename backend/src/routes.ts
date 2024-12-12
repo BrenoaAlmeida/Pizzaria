@@ -9,6 +9,8 @@ import { CreateProductController } from './controllers/Product/CreateProductCont
 import {ListByCategoryController } from './controllers/Product/ListByCategoryController'
 import { CreateOrderController } from './controllers/Order/CreateOrderController';
 import { DeleteOrderController } from './controllers/Order/DeleteOrderController';
+import { AddItemController } from './controllers/Order/AddItemController';
+import { RemoveItemController } from './controllers/Order/RemoveItemController';
 
 import { isAuthenticated } from './middlewares/isAuthenticated';
 import multer from 'multer';
@@ -43,5 +45,9 @@ router.get('/product', isAuthenticated, new ListByCategoryController().handle)
 router.post('/order', isAuthenticated, new CreateOrderController().handle)
 
 router.delete('/order', isAuthenticated, new DeleteOrderController().handle)
+
+router.post('/order/add', isAuthenticated, new AddItemController().handle)
+
+router.delete('/order/remove', isAuthenticated, new RemoveItemController().handle)
 
 export {router};    

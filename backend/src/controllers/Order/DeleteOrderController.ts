@@ -5,7 +5,7 @@ class DeleteOrderController {
     async handle(req:Request, res:Response){
         const order_id = req.query.order_id as string;
         const deleteOrderService = new DeleteOrderService;
-        const result = deleteOrderService.execute({order_id});
+        const result = await deleteOrderService.execute({order_id});
         return res.json(result);
 
     }
