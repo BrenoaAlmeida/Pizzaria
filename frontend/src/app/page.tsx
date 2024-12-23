@@ -10,8 +10,7 @@ export default function Home(){
         <Image
           src={logoImg}
           alt="Logo da pizzaria"
-        />
-      </div>
+        />      
 
       <section className={styles.login}>
       <form>
@@ -38,6 +37,7 @@ export default function Home(){
         Não possui uma conta? Cadastre-se
       </Link>
       </section>
+      </div>
     </>
   )
 }
