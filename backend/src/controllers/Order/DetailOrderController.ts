@@ -10,4 +10,4 @@ class DetailOrderController {
     }
 }
 
-export { DetailOrderController }
+export { DetailOrderController }    
