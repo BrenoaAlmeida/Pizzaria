@@ -5,7 +5,7 @@ import logoImg from  '/public/logo.svg'
 import { api } from '@/services/api'
 import { redirect } from "next/navigation"
 
-export default function SIgnup() {
+export default function Signup() {
 
     //para fazer uma função renderizar pelo servidor, é necessario adicionar a diretiva "use server", e declarar a func como async
 async function handleRegister(formData: FormData)
