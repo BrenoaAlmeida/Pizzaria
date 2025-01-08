@@ -1,11 +1,18 @@
+import { getCookieServer } from "@/lib/cookieServer";
+import { api } from "@/services/api";
 import Form from "./components/form";
 
-export default function Product(){
+export default async function Product(){
+    const token = await getCookieServer();
+    const response = await api.get("/category", {
+        headers:{
+            Authorization: `Bearer ${token}`
+        }
+    })
+
     return(
         <main>
-            <h1>Pagina Product </h1>
-
-            <Form/>
+            <Form categories={response.data}/>
         </main>     
     )
 }
