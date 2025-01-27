@@ -28,10 +28,21 @@ export function Modalorder(){
 
                     {order.map(item => (
                         <section className={styles.item} key={item.id}>
+                            
+                            {/*
+                            Usar Tag Image do Next para exibir imagens
+                            <Image 
+                                src={item.product.banner}
+                                alt='Foto do produto'
+                                width={120}
+                                height={120}
+                            /> */}
                             <span>
-                                {item.amount} - <b>{item.product.name}</b> - R$ {parseFloat(item.product.price) * item.amount}
+                                Qtd: {item.amount} - <b>{item.product.name}</b> - R$ {parseFloat(item.product.price) * item.amount}
                             </span>
-                            <span className={styles.description}>{item.product.description}</span>
+                            <span className={styles.description}>
+                                {item.product.description}
+                            </span>
                         </section>
                     ))}                    
 
@@ -41,6 +52,7 @@ export function Modalorder(){
                     </button>
                 </article>
             </section>
-        </dialog>    
-)
+        </dialog>
+        
+    )
 }
