@@ -1,13 +1,13 @@
 "use client"
 
 import { use } from 'react'
+import { useRouter } from 'next/navigation'
+import { toast } from 'sonner'
 import styles from './styles.module.scss'
 import { RefreshCcw } from 'lucide-react'
 import { OrdersProp } from '@/lib/order.type'
-import { Modalorder } from '../modal';
+import { Modalorder } from '@/app/dashboard/components/modal';
 import { OrderContext } from '@/providers/order'
-import { useRouter } from 'next/navigation'
-import { toast } from 'sonner'
 
 interface Props{
     orders: OrdersProp[];

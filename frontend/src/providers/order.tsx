@@ -69,13 +69,12 @@ export function OrderProvider({children}: OrderProviderProps){
 
     async function finishOrder(order_id: string){
         const token = getCookieClient();
-        
         const data = {
             order_id: order_id
         }
 
         try {
-            const response = await api.post("/order/finish", data, {
+            const response = await api.put("/order/finish", data, {
                 headers:{
                     Authorization: `Bearer ${token}`
                 },
