@@ -1,0 +1,1 @@
+Projeto de de um site de Pizzaria com o front-end utilizando React com o framework Next.JS, o back-end usando nodeJs com o framework Express JS, e um aplicativo mobile multi platamforma usando o React-Native
